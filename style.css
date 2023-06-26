@@ -35,13 +35,14 @@ header {
 }
 
 main {
-    padding: 3vh 5vh;
+    padding: 3vh 0;
 }
 
 .slider {
     position: relative;
     background-color: black;
     min-height: 80vh;
+    margin: 0 5vh;
     overflow: hidden;
 }
 
@@ -49,6 +50,7 @@ main {
     width: 400%;
     height: 80vh;
     display: flex;
+    overflow: hidden;
 }
 
 .slide {
@@ -106,4 +108,100 @@ main {
     right: 50%;
     bottom: 3%;
     transform: translateX(50%);
+}
+
+.fast-search {
+    padding: 5vh 3vh;
+    background-color: lightgreen;
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.fast-search form {
+    display: flex;
+}
+
+.fast-search input {
+    margin-top: 3vh;
+}
+
+#fast-search-input {
+    width: 85vw;
+    height: 5vh;
+    padding-left: 3vh;
+}
+
+.fast-search input[type="submit"] {
+    font-size: 1.8vw;
+    width: 10vw;
+    margin-left: 5vw;
+}
+
+.facts-company {
+    padding: 5vh;
+}
+
+.about-company {
+    color: lightgreen;
+    font-size: 3vw;
+    margin-bottom: 1vh;
+}
+
+.facts {
+    list-style: none;
+}
+
+.fact {
+    color: black;
+    font-size: 2vw;
+}
+
+.fact:nth-child(1):before {
+    content: '';
+    display: inline-flex;
+    width: 1.5vw;
+    height: 1.5vw;
+    background-color: red;
+    margin-right: 1vh;
+}
+
+.fact:nth-child(2):before {
+    content: '';
+    display: inline-flex;
+    width: 1.5vw;
+    height: 1.5vw;
+    background-color: orange;
+    margin-right: 1vh;
+}
+
+.fact:nth-child(3):before {
+    content: '';
+    display: inline-flex;
+    width: 1.5vw;
+    height: 1.5vw;
+    background-color: yellow;
+    margin-right: 1vh;
+}
+
+.found-animals {
+    display: flex;
+    flex-direction: column;
+    padding: 5vh 3vh;
+    background-color: lightgreen;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.card {
+    width: 100%;
+    min-height: 40vh;
+    background-color: white
+}
+
+.card * {
+    color: black;
 }
