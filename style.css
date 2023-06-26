@@ -6,7 +6,7 @@
 
 header {
     display: grid;
-    grid-template-columns: 7fr 3fr;
+    grid-template-columns: 6fr 4fr;
     grid-template-rows: 1fr;
     gap: 5vh;
     background-color: lightgreen;
@@ -32,4 +32,78 @@ header {
 
 .header-nav a {
     text-decoration: none;
+}
+
+main {
+    padding: 3vh 5vh;
+}
+
+.slider {
+    position: relative;
+    background-color: black;
+    min-height: 80vh;
+    overflow: hidden;
+}
+
+.slides {
+    width: 400%;
+    height: 80vh;
+    display: flex;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.type {
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    background-color: lightgreen;
+    padding: 3vh 5vh;
+    border-radius: 5px;
+}
+
+.desc {
+    position: absolute;
+    top: 83%;
+    left: 2%;
+    background-color: lightgreen;
+    padding: 1vh 3vh;
+    border-radius: 5px;
+}
+
+.learn-more {
+    position: absolute;
+    right: 5%;
+    bottom: 7%;
+    text-decoration: none;
+    background-color: lightgreen;
+    padding: 3vh 5vh;
+    border-radius: 5px;
+}
+
+.s1 {
+    background-color: red;
+}
+
+.s2 {
+    background-color: orange;
+}
+
+.s3 {
+    background-color: yellow;
+}
+
+.s4 {
+    background-color: lime;
+}
+
+.nav {
+    position: absolute;
+    right: 50%;
+    bottom: 3%;
+    transform: translateX(50%);
 }
