@@ -10,7 +10,11 @@ header {
     grid-template-rows: 1fr;
     gap: 5vh;
     background-color: lightgreen;
-    padding: 0 5vw;
+    padding: 0 5vh;
+}
+
+body {
+    background-color: snow;
 }
 
 .header-logo {
@@ -22,7 +26,7 @@ header {
     height: 100%;
 }
 
-.header-nav ul {
+.nav ul {
     height: 100%;
     display: flex;
     list-style: none;
@@ -30,7 +34,7 @@ header {
     justify-content: space-between;
 }
 
-.header-nav a {
+.nav a {
     text-decoration: none;
 }
 
@@ -38,12 +42,18 @@ main {
     padding: 3vh 0;
 }
 
+section {
+    padding: 5vh;
+    margin: 15vh 0;
+}
+
 .slider {
     position: relative;
     background-color: black;
     min-height: 80vh;
-    margin: 0 5vh;
+    margin: 5vh;
     overflow: hidden;
+    padding: 0;
 }
 
 .slides {
@@ -69,8 +79,9 @@ main {
 }
 
 .desc {
+    width: 35%;
     position: absolute;
-    top: 83%;
+    bottom: 7%;
     left: 2%;
     background-color: lightgreen;
     padding: 1vh 3vh;
@@ -103,7 +114,7 @@ main {
     background-color: lime;
 }
 
-.nav {
+.slider-nav {
     position: absolute;
     right: 50%;
     bottom: 3%;
@@ -111,9 +122,8 @@ main {
 }
 
 .fast-search {
-    padding: 5vh 3vh;
+    padding: 5vh;
     background-color: lightgreen;
-    margin-top: 3vh;
     display: flex;
     flex-direction: column;
 }
@@ -122,8 +132,13 @@ main {
     display: flex;
 }
 
+.fast-search label {
+    font-size: 3vw;
+}
+
 .fast-search input {
     margin-top: 3vh;
+    font-size: 1.8vw;
 }
 
 #fast-search-input {
@@ -133,7 +148,6 @@ main {
 }
 
 .fast-search input[type="submit"] {
-    font-size: 1.8vw;
     width: 10vw;
     margin-left: 5vw;
 }
@@ -187,21 +201,193 @@ main {
 .found-animals {
     display: flex;
     flex-direction: column;
-    padding: 5vh 3vh;
+    padding: 5vh;
     background-color: lightgreen;
+}
+
+.title {
+    font-size: 3vw;
+    margin-bottom: 3vh;
 }
 
 .cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 2vh;
 }
 
 .card {
     width: 100%;
     min-height: 40vh;
-    background-color: white
+    background-color: white;
+    position: relative;
 }
 
 .card * {
     color: black;
+    position: absolute;
 }
+
+.card .number {
+    right: 3%;
+    top: 3%;
+}
+
+.card .district {
+    top: 3%;
+    left: 3%;
+}
+
+.card .date {
+    bottom: 3%;
+    left: 3%;
+}
+
+.card .auth {
+    bottom: 3%;
+    right: 3%;
+}
+
+.form {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: lightgreen;
+}
+
+.form h2 {
+    font-size: 3vw;
+    padding: 10vh 10vh 5vh 10vh;
+    background-color: wheat;
+    width: 40%;
+}
+
+.form form {
+    padding:  0 10vh 5vh 10vh;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    background-color: wheat;
+}
+
+.form input {
+    font-size: 1.8vw;
+    height: 5vh;
+    outline: none;
+    border: none;
+    padding: 1%;
+    margin-bottom: 2vh;
+}
+
+.form input[type="submit"] {
+    margin-top: 10vh;
+    height: 6vh;
+}
+
+.feedback-slider {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    margin: 15vh 5vh;
+}
+
+.feedbacks {
+    display: flex;
+    width: 400%;
+    height: 55vh;
+}
+
+.feedback {
+    border-radius: 15px;
+    width: 80%;
+    margin: 0 calc(10% / 4);
+    column-gap: 3vh;
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    padding: 5vh;
+    background-color: lightgreen;
+}
+
+.feedback .author {
+    align-self: center;
+    font-size: 1.8vw;
+}
+
+.feedback .fdb-text {
+    align-self: flex-start;
+    font-size: 1.5vw;
+}
+
+.fdb-date {
+    font-size: 1.8vw;
+}
+
+.feedback .img {
+    width: 40vh;
+    height: 40vh;
+    background-color: aqua;
+    grid-column: 2 / 3;
+    grid-row: 1 / 5;
+    justify-self: flex-end;
+    align-self: center;
+}
+
+.right, .left {
+    background-color: aqua;
+    width: 5vh;
+    height: 5vh;
+}
+
+.fdb-nav {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.subscribe * {
+    color: black;
+}
+
+.subscribe form,
+.subscribe h2 {
+    margin-left: auto;
+}
+
+.subscribe input[type="checkbox"] {
+    margin-bottom: 0;
+    margin-right: 2vh;
+    width: 2.5vh;
+    height: 2.5vh;
+}
+
+.subscribe.form label {
+    display: flex;
+    align-items: center;
+    font-size: 1.5vw;
+}
+
+.subscribe input {
+    margin-bottom: 3vh;
+}
+
+footer {
+    padding: 5vh;
+    background-color: lightgreen;
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 2vh;
+}
+
+.footer.nav {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+}
+
+footer a {
+    text-decoration: none;
+}
+
