@@ -4,6 +4,10 @@
     color: white;
 }
 
+input {
+    color: black;
+}
+
 header {
     display: grid;
     grid-template-columns: 6fr 4fr;
@@ -390,4 +394,5 @@ footer {
 footer a {
     text-decoration: none;
 }
+
 

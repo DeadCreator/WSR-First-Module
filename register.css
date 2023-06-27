@@ -1,0 +1,72 @@
+/*registration page*/
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h2 {
+    color: lightgreen;
+    margin-left: 5vh;
+    font-size: 3vw;
+    margin-top: 5vh;
+}
+
+.register-form {
+    background-color: lightgreen;
+    margin: 5vh;
+    padding: 0;
+    display: flex;
+}
+
+.register-form form {
+    padding: 5vh 10vh;
+    margin: 0;
+    background-color: wheat;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    column-gap: 10vh;
+    row-gap: 3vh;
+}
+
+.register-form .error {
+    color: red;
+}
+
+
+.register-form form * {
+    font-size: 1.5vw;
+    color: black;
+    height: fit-content;
+}
+
+.register-form input {
+    padding: 1vh;
+}
+
+.register-form input[type="submit"] {
+    margin-top: 5vh;
+}
+
+label:nth-last-child(2) {
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+}
+
+label:nth-last-child(2) input {
+    width: 3vh;
+    height: 3vh;
+    margin-right: 1vh;
+}
+
+footer {
+    margin-top: auto;
+}
+
+.forgot-pass {
+    align-self: flex-end;
+    justify-self: flex-end;
+}
