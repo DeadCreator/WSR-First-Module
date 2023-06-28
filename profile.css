@@ -1,0 +1,97 @@
+main {
+    display: grid;
+    grid-template-columns: 8fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    padding: 0;
+    background-color: white;
+}
+
+aside {
+    grid-column: 2 / 3;
+    grid-row: 1 / 5;
+    background-color: wheat;
+    padding: 3vh;
+}
+
+aside * {
+    color: black;
+    margin-top: 3vh;
+}
+
+.change-data {
+    display: flex;
+    flex-direction: column;
+}
+
+.change-data * {
+    margin-top: 1vh;
+}
+
+.posts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 5vh;
+    padding: 0;
+    min-height: 18vw;
+    column-gap: 5vh;
+}
+
+.post {
+    position: relative;
+    background-color: lightgreen;
+    width: 18vw;
+}
+
+.post * {
+    position: absolute;
+}
+
+.district {
+    top: 5%;
+    left: 3%;
+}
+
+.pseudo {
+    right: 5%;
+    bottom: 5%;
+}
+
+.date {
+    left: 3%;
+    top: 13%;
+}
+
+.status {
+    top: 5%;
+    right: 5%;
+    font-size: 1.5vw;
+}
+
+.extra {
+    bottom: 5%;
+    left: 5%;
+    width: 30%;
+}
+
+.edit, .delete {
+    height: 5vh;
+    width: 50%;
+    background-color: lime;
+    bottom: -5vh;
+    border: none;
+    outline: none;
+}
+
+.delete {
+    right: 0;
+    background-color: red;
+}
+
+.posts.archive {
+    margin-bottom: 10vh;
+}
+
+.archive .post {
+    opacity: 50%;
+    background-color: wheat;
+}
