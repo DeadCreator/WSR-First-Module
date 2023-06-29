@@ -4,8 +4,16 @@
     color: white;
 }
 
+html, body {margin: 0; height: 100%; overflow-x: hidden}
+
 input {
     color: black;
+}
+
+#open-menu,
+#open-menu-footer,
+.open-menu {
+    display: none;
 }
 
 header {
@@ -14,7 +22,8 @@ header {
     grid-template-rows: 1fr;
     gap: 5vh;
     background-color: lightgreen;
-    padding: 0 5vh;
+    padding: 0 5vw;
+    width: 90vw;
 }
 
 body {
@@ -54,7 +63,7 @@ section {
 .slider {
     position: relative;
     background-color: black;
-    min-height: 80vh;
+    height: 80vh;
     margin: 5vh;
     overflow: hidden;
     padding: 0;
@@ -378,7 +387,7 @@ section {
 }
 
 footer {
-    padding: 5vh;
+    padding: 5vw;
     background-color: lightgreen;
     display: grid;
     grid-template-columns: 3fr 7fr;
@@ -393,6 +402,96 @@ footer {
 
 footer a {
     text-decoration: none;
+}
+
+@media screen and (max-width: 960px) {
+
+
+    .open-menu {
+        display: flex;
+        width: 5vh;
+        height: 5vh;
+        background-color: aqua;
+        align-self: flex-end;
+    }
+
+    #open-menu:checked ~ ul,
+    #open-menu-footer:checked ~ ul {
+        right: -5vw;
+        transition: right 1s;
+    }
+
+    #open-menu:checked ~ label,
+    #open-menu-footer:checked ~ label{
+        background-color: wheat;
+    }
+
+    .header.nav,
+    .footer.nav {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+    }
+
+    .header.nav ul,
+    .footer.nav ul{
+        flex-direction: column;
+        background-color: wheat;
+        position: absolute;
+        height: 50vh;
+        z-index: 1;
+        top: 100%;
+        right: -100vw;
+        width: 100%;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding: 0 5vw;
+        transition: right 1s;
+    }
+
+    main {
+        padding-top: 0;
+    }
+
+    .slider {
+        width: 90vw;
+        height: 90vw;
+        margin: 5vw;
+    }
+
+    .form form,
+    .form h2 {
+        width: 80%;
+        padding: 3vw 10%;
+        font-size: 4vw;
+    }
+
+    .form form *,
+    .subscribe.form form * {
+        font-size: 4vw;
+    }
+
+    .form h2 {
+        font-size: 6vw;
+        padding: 3vh 10%;
+    }
+
+
+
+    footer {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .footer.nav ul {
+        top: auto;
+        bottom: calc(100% + 5vw);
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
 }
 
 

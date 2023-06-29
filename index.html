@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
@@ -11,6 +12,8 @@
             <img src="media/logo.svg">
         </a>
         <nav class="header nav">
+            <input type="checkbox" id="open-menu">
+            <label for="open-menu" class="open-menu"></label>
             <ul>
                 <li><a href="index.html#search-form">Поиск</a></li>
                 <li><a href="register.html">Регистрация</a></li>
@@ -53,7 +56,7 @@
         </section>
         <section class="fast-search">
             <label for="fast-search-input">Find Animal</label>
-            <form>
+            <form action="search.html">
                 <input id="fast-search-input" type="text" placeholder="type something">
                 <input value="Search" type="submit">
             </form>
@@ -109,7 +112,7 @@
         </section>
         <section id="search-form" class="search form">
             <h2>Find Your animal</h2>
-            <form>
+            <form action="search.html">
                 <input type="text" placeholder="district">
                 <input type="text" placeholder="animal type">
                 <input type="submit" value="Search">
@@ -163,6 +166,8 @@
         <a href="tel:8 (800)123-45-67" class="tel">8 (800)123-45-67</a>
         <a href="mailto:mail@newlife.ru" class="mail">mail@newlife.ru</a>
         <nav class="footer nav">
+            <input type="checkbox" id="open-menu-footer">
+            <label for="open-menu-footer" class="open-menu"></label>
             <ul>
                 <li><a href="index.html">Главная</a></li>
                 <li><a href="register.html">Регистрация</a></li>

@@ -95,3 +95,43 @@ aside * {
     opacity: 50%;
     background-color: wheat;
 }
+
+.main-search {
+    grid-template-rows: auto;
+}
+
+.main-search .posts {
+    grid-template-columns: 1fr 1fr;
+}
+
+.main-search .post {
+    height: 50vh;
+    width: 100%;
+}
+
+.main-search .search.form {
+    min-height: 80vh;
+    background-color: wheat;
+}
+
+.main-search .search.form,
+.main-search .search.form form,
+.main-search .search.form h2 {
+    width: 90%;
+    padding: 0 5%;
+    margin: 0;
+}
+
+.main-search .search.form h2 {
+    padding: 5vh 5%;
+    font-size: 2vw;
+}
+
+.main-search .search.form * {
+    font-size: 1.3vw;
+}
+
+.main-search .tel  {
+    top: 15%;
+    right: 5%;
+}

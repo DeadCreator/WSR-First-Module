@@ -21,14 +21,13 @@ h2 {
 }
 
 .register-form form {
-    padding: 5vh 10vh;
+    padding: 5vh;
     margin: 0;
     background-color: wheat;
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
     column-gap: 10vh;
-    row-gap: 3vh;
 }
 
 .register-form .error {
@@ -40,6 +39,7 @@ h2 {
     font-size: 1.5vw;
     color: black;
     height: fit-content;
+    margin: 3vh 5vh;
 }
 
 .register-form input {
@@ -50,7 +50,7 @@ h2 {
     margin-top: 5vh;
 }
 
-label:nth-last-child(2) {
+.register-form label:nth-last-child(2) {
     margin-top: 5vh;
     display: flex;
     align-items: center;
@@ -69,4 +69,44 @@ footer {
 .forgot-pass {
     align-self: flex-end;
     justify-self: flex-end;
+}
+
+.register-form .auto-reg {
+    background-color: lightgreen;
+    grid-column: 1 / 3;
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10vh;
+    margin: 0;
+}
+
+label[for="add-reg"] {
+    display: none;
+}
+
+#add-reg {
+    height: 2vh;
+    width: 2vh;
+    position: relative;
+    grid-column: 1 / 3;
+    justify-self: flex-end;
+    display: flex;
+    align-items: center;
+}
+
+#add-reg:before {
+    position: absolute;
+    right: 3vh;
+    content: 'Register automatically';
+    width: 15vw;
+}
+
+#add-reg:checked ~ .auto-reg {
+    display: grid;
+}
+
+@media screen and (max-width: 960px) {
+    .register-form form {
+        grid-template-columns: 1fr;
+    }
 }
